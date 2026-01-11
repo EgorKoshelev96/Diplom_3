@@ -12,7 +12,7 @@ public class TransitionPageTest {
 
     @Test
     @DisplayName("Проверка перехода по клику на «Личный кабинет».")
-    public void CheckingClickThroughRatePersonalAccount() {
+    public void checkingClickThroughRatePersonalAccount() {
 
         LoginPage loginPage = new LoginPage(browserExtensions.getWebDriver());
         RegistrationPage registrationPage = new RegistrationPage(browserExtensions.getWebDriver());
@@ -75,8 +75,6 @@ public class TransitionPageTest {
         transitionPage.exitButton();
         assertEquals("Вход", transitionPage.getHeaderLogin());
     }
-
-
 
 
 }

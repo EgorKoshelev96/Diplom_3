@@ -1,3 +1,4 @@
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -16,35 +17,35 @@ public class RegistrationPage {
     public RegistrationPage(WebDriver webDriver){
         this.webDriver = webDriver;
     }
-
+    @Step("Нажимаем на кнопку <<Личный кабинет>>")
     public void clickCabinetButton() {
         webDriver.findElement(cabinetButton).click();
     }
-
+    @Step("Нажимаем на кнопку <<Зарегистрироваться>>")
     public void clickRegisterButton() {
         webDriver.findElement(registerButton).click();
     }
-
+    @Step("Вводим данные в поле <<Имя>>")
     public void setNameInput(String name) {
         webDriver.findElement(nameInput).sendKeys(name);
     }
-
+    @Step("Вводим данные в поле <<Email>>")
     public void setEmailInput(String email) {
         webDriver.findElement(emailInput).sendKeys(email);
     }
-
+    @Step("Вводим данные в поле <<Пароль>>")
     public void setPasswordInput(String password) {
         webDriver.findElement(passwordInput).sendKeys(password);
     }
-
+    @Step("Нажимаем на кнопку <<Зарегистрироваться>> на странице Регистрация")
     public void clickLoginRegisterButton() {
         webDriver.findElement(loginRegisterButton).click();
     }
-
+    @Step("Проверяем полученную запись об ошибке пароля")
     public String incorrectPassError() {
         return webDriver.findElement(incorrectPassword).getText();
     }
-
+    @Step("Проверяем отображение кнопки <<Войти>>")
     public String loginButton() {
         return webDriver.findElement(loginButton).getText();
     }
