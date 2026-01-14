@@ -1,4 +1,4 @@
-package api;
+package api.dto;
 
 public class CreatingUser {
         private String email;
